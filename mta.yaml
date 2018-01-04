@@ -7,3 +7,37 @@ modules:
  - name: ui
    type: html5
    path: ui
+
+ - name: db
+   type: hdb
+   path: db
+   requires:
+    - name: hdi_db
+
+
+
+ - name: node
+   type: nodejs
+   path: node
+   provides:
+    - name: node_api
+      properties:
+         url: ${default-url}
+
+
+ - name: nodenoxsjs
+   type: nodejs
+   path: nodenoxsjs
+   provides:
+    - name: nodenoxsjs_api
+      properties:
+         url: ${default-url}
+
+resources:
+ - name: hdi_db
+   parameters:
+      config:
+         schema: YARS
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
