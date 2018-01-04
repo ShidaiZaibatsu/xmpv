@@ -1,0 +1,7 @@
+namespace yars.db;
+
+context cds {
+    entity world {
+        key continent : String(100);
+    };
+};
