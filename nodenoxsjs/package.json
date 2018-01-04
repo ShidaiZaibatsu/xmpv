@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "http": "latest",
+    "util": "latest",
+    "child_process": "latest"    
+  },
+  "files": [],
+  "main": "server.js",
+  "name": "node",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "6.x"
+  }
+}
